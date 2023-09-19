@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+    <link rel="stylesheet" href="style.css">
+    <title>Rock Paper Scissors</title>
+    <style>
+        /* Custom styles can be added here */
+        .score-container {
+            margin-top: 20px;
+        }
+
+        /* Add custom styles for circular buttons */
+        .circular-button {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+
+        /* Additional custom styles */
+        .title {
+            margin-bottom: 20px; /* Add space below the title */
+        }
+
+        /* Flex container for buttons */
+        .button-container {
+            display: flex;
+            justify-content: center; /* Center buttons horizontally */
+            gap: 30px; /* Add a 30px gap between buttons */
+        }
+
+        /* Use Bulma's responsive classes to change button layout */
+        @media screen and (max-width: 768px) {
+            .button-container {
+                flex-direction: column; /* Display buttons in a column on mobile */
+                align-items: center; /* Center buttons vertically on mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+<section class="hero is-primary is-fullheight">
+    <div class="hero-body">
+        <div class="container has-text-centered">
+            <h1 class="title is-size-1">Rock Paper Scissors</h1>
+            <div class="choices m-4">
+                <div class="button-container">
+                    <button class="button is-large is-white circular-button" id="rock">
+                        🪨
+                    </button>
+                    <button class="button is-large is-white circular-button" id="paper">
+                        📄
+                    </button>
+                    <button class="button is-large is-white circular-button" id="scissors">
+                        ✂️
+                    </button>
+                </div>
+            </div>
+            <div class="has-text-centered p-4 is-size-4" id="result"></div>
+            <div class="score-container has-text-weight-bold">
+                <p class="is-size-5">Score:</p>
+                <p id="player-score">Player: 0</p>
+                <p id="computer-score">Computer: 0</p>
+            </div>
+        </div>
+    </div>
+    <div class="has-text-centered p-4 is-size-3" id="game-over">
+        <p id="winner-text"></p>
+        <button class="button is-rounded is-small is-white" id="reset-button">Reset Game</button>
+    </div>
+</section>
+<script src="script.js"></script>
+</body>
+</html>
